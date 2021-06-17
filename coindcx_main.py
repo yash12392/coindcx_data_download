@@ -272,6 +272,8 @@ if __name__ == '__main__':
 
         st.warning("Please note, we have only downloaded the data that was provided by CoinDCX, if you have missing ticks, that's because there was no data for the pair you requested.")
 
+        st.warning("Please note, if you are downloading the file on a **mobile phone**, it automatically converts the **.csv** file to **.xlsx** file which corrupts it, you can remove **.xlsx** by renaming the file and open it. That should work. If you are downloading the data on desktop, you should face no problems!")
+
         placeholder2 = st.empty()
 
         placeholder2.info("Generating Button...")
@@ -286,7 +288,10 @@ if __name__ == '__main__':
         st.write("""**Trade With Python** started in February 2021 with the mission to educate **Indians** about Algo - Trading by specifically using tools and strategies that work 
                     in the Indian market. Our blogs are very simple to understand and are written by contributors who know Finance and Technology.""")
 
-        st.markdown("""Website: https://tradewithpython.com""", unsafe_allow_html= True)
+        st.markdown("""**Website:** https://tradewithpython.com""", unsafe_allow_html= True)
+
+        st. markdown("""**This project is open-sourced on Github:** https://github.com/yash12392/coindcx_data_download""", unsafe_allow_html= True)
+        st.markdown("""**Do give it a :star: and feel free to fork and suggest any additional improvements.**""", unsafe_allow_html= True)
 
         st.write("""We request you to fill in the Contact Us Form on the below page if you have any feedback on this app or on our blogs :smiley:""")
 
