@@ -219,7 +219,7 @@ if __name__ == '__main__':
     selected_exchange = st.selectbox(label = 'Which Exchange Would you like to download data for?', options = exchanges, index = 2)
     exchange_df = market_df[market_df['exchange_code'] == selected_exchange]
 
-    col1, col2 = st.beta_columns(2)
+    col1, col2 = st.columns(2)
 
     with col1:
         available_target_ccy = exchange_df['target_currency_st'].unique()
@@ -232,7 +232,7 @@ if __name__ == '__main__':
         available_base_df = target_currency_df[target_currency_df['base_currency_st'] == selected_base_ccy]
 
     with st.form("coindcx_form"):
-            col3, col4 = st.beta_columns(2)
+            col3, col4 = st.columns(2)
 
             with col3:
                 from_date = st.date_input(label = 'Select From Date', value = datetime(2021,1,1), min_value = datetime(2018,1,1), max_value = (datetime.now() - timedelta(days=1)))
@@ -284,7 +284,7 @@ if __name__ == '__main__':
 
     st.header("Know More About Trade With Python")
 
-    with st.beta_expander(label = "Click Here to Expand", expanded = True):
+    with st.expander(label = "Click Here to Expand", expanded = True):
         st.write("""**Trade With Python** started in February 2021 with the mission to educate **Indians** about Algo - Trading by specifically using tools and strategies that work 
                     in the Indian market. Our blogs are very simple to understand and are written by contributors who know Finance and Technology.""")
 
